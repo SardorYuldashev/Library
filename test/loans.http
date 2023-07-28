@@ -1,0 +1,20 @@
+### Buyurtma yaratish
+POST http://localhost:3000/loans
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRjMzlhMzhiOWEzMGZmMTFiZWM1NmRkIiwiaXNfc3VwZXIiOmZhbHNlfSwiaWF0IjoxNjkwNTQwNjc4LCJleHAiOjE2OTA2MjcwNzh9.fnC2JalhpEbccHd0MJkCzYE8I27nV5GD19cN29o8eJA
+Content-Type: application/json
+
+{
+  "book": "64c3a286149664997efbb6b9",
+  "borrower": "64c39d839413fd5fda60248f",
+  "due_date": "2023-08-30"
+}
+
+
+### Buyurtmalarni ko'rish
+GET http://localhost:3000/loans
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRjMzlhMzhiOWEzMGZmMTFiZWM1NmRkIiwiaXNfc3VwZXIiOmZhbHNlfSwiaWF0IjoxNjkwNTQwNjc4LCJleHAiOjE2OTA2MjcwNzh9.fnC2JalhpEbccHd0MJkCzYE8I27nV5GD19cN29o8eJA
+
+
+### Bitta buyurtmani ko'rish
+GET http://localhost:3000/loans/64c3f1825e1e556f8bad951b
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRjMzlhMzhiOWEzMGZmMTFiZWM1NmRkIiwiaXNfc3VwZXIiOmZhbHNlfSwiaWF0IjoxNjkwNTQwNjc4LCJleHAiOjE2OTA2MjcwNzh9.fnC2JalhpEbccHd0MJkCzYE8I27nV5GD19cN29o8eJA

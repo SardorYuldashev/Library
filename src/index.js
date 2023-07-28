@@ -7,6 +7,7 @@ const borrowersRoute = require("./modules/borrowers/_api");
 const pubishersRoute = require("./modules/publishers/_api");
 const authorsRoute = require("./modules/authors/_api");
 const booksRoute = require("./modules/books/_api");
+const loansRoute = require("./modules/loans/_api");
 
 const app = express();
 
@@ -16,6 +17,7 @@ app.use(borrowersRoute);
 app.use(pubishersRoute);
 app.use(authorsRoute);
 app.use(booksRoute);
+app.use(loansRoute);
 
 app.use(handleError);
 

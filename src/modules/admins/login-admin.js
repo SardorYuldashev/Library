@@ -11,8 +11,6 @@ const loginAdmin = async ({ username, password }) => {
     throw new UnauthorizedError('Username yoki password xato');
   };
 
-  console.log(existing);
-
   if (existing.is_deleted) {
     throw new UnauthorizedError("Profil o'chirib tashlangan");
   };
