@@ -1,0 +1,55 @@
+### Admin qo'shish
+POST http://localhost:3000/admins
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRjMzlhMjZiOWEzMGZmMTFiZWM1NmRiIiwiaXNfc3VwZXIiOnRydWV9LCJpYXQiOjE2OTA1NDA4NjIsImV4cCI6MTY5MDYyNzI2Mn0.yKahodCgXdGZbF0hdGFk_A3a7mD4vFLFhVo-cZ_i6sA
+Content-Type: application/json
+
+{
+  "full_name": "Oybek Xasanov",
+  "username": "oybek",
+  "password": "1234"
+}
+
+
+### Login qilish
+POST http://localhost:3000/login
+Content-Type: application/json
+
+{
+  "username": "sardor",
+  "password": "1234"
+}
+
+
+### Adminlar ro'yxati
+GET http://localhost:3000/admins
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRjMzlhMzhiOWEzMGZmMTFiZWM1NmRkIiwiaXNfc3VwZXIiOmZhbHNlfSwiaWF0IjoxNjkwNTQwNjc4LCJleHAiOjE2OTA2MjcwNzh9.fnC2JalhpEbccHd0MJkCzYE8I27nV5GD19cN29o8eJA
+
+
+### Bitta adminni ko'rish
+GET http://localhost:3000/admins/64c39a69b9a30ff11bec56e1
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRjMzlhMzhiOWEzMGZmMTFiZWM1NmRkIiwiaXNfc3VwZXIiOmZhbHNlfSwiaWF0IjoxNjkwNTQwNjc4LCJleHAiOjE2OTA2MjcwNzh9.fnC2JalhpEbccHd0MJkCzYE8I27nV5GD19cN29o8eJA
+
+
+### Edit admin (hamma)
+PATCH http://localhost:3000/admins
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRjMzlhMzhiOWEzMGZmMTFiZWM1NmRkIiwiaXNfc3VwZXIiOmZhbHNlfSwiaWF0IjoxNjkwNTQwNjc4LCJleHAiOjE2OTA2MjcwNzh9.fnC2JalhpEbccHd0MJkCzYE8I27nV5GD19cN29o8eJA
+Content-Type: application/json
+
+{
+  "full_name": "Imron Abdusalimov"
+}
+
+
+### Edit admin (super_admin)
+PATCH http://localhost:3000/admins/64c39a69b9a30ff11bec56e1
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRjMzlhMzhiOWEzMGZmMTFiZWM1NmRkIiwiaXNfc3VwZXIiOmZhbHNlfSwiaWF0IjoxNjkwNTQwNjc4LCJleHAiOjE2OTA2MjcwNzh9.fnC2JalhpEbccHd0MJkCzYE8I27nV5GD19cN29o8eJA
+Content-Type: application/json
+
+{
+  "full_name": "Arziyev Sherzod"
+}
+
+
+### Adminni o'chirish (super_admin)
+DELETE http://localhost:3000/admins/64c39a69b9a30ff11bec56e1
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRjMzlhMjZiOWEzMGZmMTFiZWM1NmRiIiwiaXNfc3VwZXIiOnRydWV9LCJpYXQiOjE2OTA1NDA4NjIsImV4cCI6MTY5MDYyNzI2Mn0.yKahodCgXdGZbF0hdGFk_A3a7mD4vFLFhVo-cZ_i6sA

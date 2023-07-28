@@ -1,0 +1,35 @@
+### Nashriyot qo'shish
+POST http://localhost:3000/publishers
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRjMzlhMzhiOWEzMGZmMTFiZWM1NmRkIiwiaXNfc3VwZXIiOmZhbHNlfSwiaWF0IjoxNjkwNTQwNjc4LCJleHAiOjE2OTA2MjcwNzh9.fnC2JalhpEbccHd0MJkCzYE8I27nV5GD19cN29o8eJA
+Content-Type: application/json
+
+{
+  "name": "Bolalik",
+  "address": "Toshkent",
+  "phone": "+998947654321"
+}
+
+
+### Nashriyotlar ro'yxati
+GET http://localhost:3000/publishers
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRjMzlhMzhiOWEzMGZmMTFiZWM1NmRkIiwiaXNfc3VwZXIiOmZhbHNlfSwiaWF0IjoxNjkwNTQwNjc4LCJleHAiOjE2OTA2MjcwNzh9.fnC2JalhpEbccHd0MJkCzYE8I27nV5GD19cN29o8eJA
+
+
+### Bitta nashriyot
+GET http://localhost:3000/publishers/64c38e5d9ec688c1ef9244cd
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRjMzlhMzhiOWEzMGZmMTFiZWM1NmRkIiwiaXNfc3VwZXIiOmZhbHNlfSwiaWF0IjoxNjkwNTQwNjc4LCJleHAiOjE2OTA2MjcwNzh9.fnC2JalhpEbccHd0MJkCzYE8I27nV5GD19cN29o8eJA
+
+
+### Nashriyotni tahrirlash
+PATCH http://localhost:3000/publishers/64c38e5d9ec688c1ef9244cd
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRjMzlhMzhiOWEzMGZmMTFiZWM1NmRkIiwiaXNfc3VwZXIiOmZhbHNlfSwiaWF0IjoxNjkwNTQwNjc4LCJleHAiOjE2OTA2MjcwNzh9.fnC2JalhpEbccHd0MJkCzYE8I27nV5GD19cN29o8eJA
+Content-Type: application/json
+
+{
+  "name": "Via Sharq"
+}
+
+
+### Nashriyotni o'chirish
+DELETE http://localhost:3000/publishers/64c38dc999ebc2051fe57fb5
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRjMzVjYTg2OTk4YTVhZjc3NWU4ZjY0IiwiaXNfc3VwZXIiOmZhbHNlfSwiaWF0IjoxNjkwNTMxNDg2LCJleHAiOjE2OTA2MTc4ODZ9.hbohhdKo3eVC1gAUyLG77jp8yETELZSEbiLhquLjyLs

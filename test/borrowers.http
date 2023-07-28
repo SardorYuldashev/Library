@@ -1,0 +1,35 @@
+### Kitobxon qo'shish
+POST http://localhost:3000/borrowers
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRjMzlhMzhiOWEzMGZmMTFiZWM1NmRkIiwiaXNfc3VwZXIiOmZhbHNlfSwiaWF0IjoxNjkwNTQwNjc4LCJleHAiOjE2OTA2MjcwNzh9.fnC2JalhpEbccHd0MJkCzYE8I27nV5GD19cN29o8eJA
+Content-Type: application/json
+
+{
+  "full_name": "Javlon Avazov",
+  "address": "Surxondaryo",
+  "phone": "+998901111115"
+}
+
+
+### Kitobxonlar ro'yxati
+GET http://localhost:3000/borrowers
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRjMzlhMzhiOWEzMGZmMTFiZWM1NmRkIiwiaXNfc3VwZXIiOmZhbHNlfSwiaWF0IjoxNjkwNTQwNjc4LCJleHAiOjE2OTA2MjcwNzh9.fnC2JalhpEbccHd0MJkCzYE8I27nV5GD19cN29o8eJA
+
+
+### Bitta kitobxon
+GET http://localhost:3000/borrowers/64c37c69fe1f14ed468073af
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRjMzlhMzhiOWEzMGZmMTFiZWM1NmRkIiwiaXNfc3VwZXIiOmZhbHNlfSwiaWF0IjoxNjkwNTQwNjc4LCJleHAiOjE2OTA2MjcwNzh9.fnC2JalhpEbccHd0MJkCzYE8I27nV5GD19cN29o8eJA
+
+
+### Kitobxonni tahrirlash
+PATCH http://localhost:3000/borrowers/64c37c69fe1f14ed468073af
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRjMzlhMzhiOWEzMGZmMTFiZWM1NmRkIiwiaXNfc3VwZXIiOmZhbHNlfSwiaWF0IjoxNjkwNTQwNjc4LCJleHAiOjE2OTA2MjcwNzh9.fnC2JalhpEbccHd0MJkCzYE8I27nV5GD19cN29o8eJA
+Content-Type: application/json
+
+{
+  "phone": "+998901211221"
+}
+
+
+### Kitobxoni o'chirish
+DELETE http://localhost:3000/borrowers/64c37c69fe1f14ed468073af
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRjMzlhMzhiOWEzMGZmMTFiZWM1NmRkIiwiaXNfc3VwZXIiOmZhbHNlfSwiaWF0IjoxNjkwNTQwNjc4LCJleHAiOjE2OTA2MjcwNzh9.fnC2JalhpEbccHd0MJkCzYE8I27nV5GD19cN29o8eJA
