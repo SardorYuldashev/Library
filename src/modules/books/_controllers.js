@@ -74,7 +74,7 @@ const getBook = async (req, res, next) => {
  */
 const patchBook = async (req, res, next) => {
   try {
-    httpValidator({ body: req.body }, patchBookSchema);
+    httpValidator({ body: req.body, params: req.params }, patchBookSchema);
 
     const result = await editBook({ ...req.params, ...req.body });
 

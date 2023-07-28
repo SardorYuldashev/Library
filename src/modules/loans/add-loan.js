@@ -10,10 +10,10 @@ const addLoan = async (data, user) => {
   const currentDate = new Date();
 
   exist.forEach(item => {
-    if (item.due_date < currentDate) {
+    if (item.due_date < currentDate && !item.returned) {
       haveDuty = true
-    }
-    totalBooks++
+    };
+    totalBooks++;
   });
 
   if (haveDuty) {

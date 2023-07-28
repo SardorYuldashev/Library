@@ -22,6 +22,11 @@ const loanSchema = new mongoose.Schema(
     due_date: {
       type: mongoose.SchemaTypes.Date,
     },
+    returned: {
+      type: mongoose.SchemaTypes.Boolean,
+      required: true,
+      default: false
+    }
   },
   {
     versionKey: false,

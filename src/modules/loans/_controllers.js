@@ -3,7 +3,8 @@ const httpValidator = require('../../shared/http-validator');
 const addLoan = require('./add-loan');
 const listLoans = require('./list-loans');
 const showLoan = require('./show-loan');
-const { postLoanSchema, showLoanSchema } = require('./_schemas');
+const { postLoanSchema, showLoanSchema, editLoanSchema } = require('./_schemas');
+const editLoan = require('./edit-loan');
 
 /**
  * @param {express.Request} req
@@ -62,8 +63,28 @@ const getLoan = async (req, res, next) => {
   };
 };
 
+/**
+ * @param {express.Request} req
+ * @param {express.Response} res
+ * @param {express.NextFunction} next
+ */
+const patchLoan = async (req, res, next) => {
+  try {
+    httpValidator({ params: req.params }, editLoanSchema);
+
+    const result = await editLoan(req.params);
+
+    res.status(200).json({
+      data: result,
+    });
+  } catch (error) {
+    next(error);
+  };
+};
+
 module.exports = {
   postLoan,
   getLoans,
-  getLoan
+  getLoan,
+  patchLoan
 };

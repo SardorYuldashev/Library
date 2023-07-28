@@ -13,3 +13,9 @@ exports.showLoanSchema = {
     id: Joi.string(),
   }),
 };
+
+exports.editLoanSchema = {
+  params: Joi.object({
+    id: Joi.string(),
+  }),
+};

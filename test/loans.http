@@ -4,9 +4,9 @@ Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRjMzlh
 Content-Type: application/json
 
 {
-  "book": "64c3a286149664997efbb6b9",
-  "borrower": "64c39d839413fd5fda60248f",
-  "due_date": "2023-08-30"
+  "book": "64c4234e78042b4ddffe9d20",
+  "borrower": "64c41c81996b735434437235",
+  "due_date": "2023-08-15"
 }
 
 
@@ -16,5 +16,10 @@ Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRjMzlh
 
 
 ### Bitta buyurtmani ko'rish
-GET http://localhost:3000/loans/64c3f1825e1e556f8bad951b
+GET http://localhost:3000/loans/64c428c1ecadce476f970838
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRjMzlhMzhiOWEzMGZmMTFiZWM1NmRkIiwiaXNfc3VwZXIiOmZhbHNlfSwiaWF0IjoxNjkwNTQwNjc4LCJleHAiOjE2OTA2MjcwNzh9.fnC2JalhpEbccHd0MJkCzYE8I27nV5GD19cN29o8eJA
+
+
+### Kitob qaytarilganini qayd qilish
+PATCH http://localhost:3000/loans/64c42cb898c671db3a55a162
 Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRjMzlhMzhiOWEzMGZmMTFiZWM1NmRkIiwiaXNfc3VwZXIiOmZhbHNlfSwiaWF0IjoxNjkwNTQwNjc4LCJleHAiOjE2OTA2MjcwNzh9.fnC2JalhpEbccHd0MJkCzYE8I27nV5GD19cN29o8eJA
