@@ -7,6 +7,7 @@ const editAuthor = require('./edit-author');
 const removeAuthor = require('./remove-author');
 const {
   postAuthorSchema,
+  getAuthorsSchema,
   showAuthorSchema,
   patchAuthorSchema,
   deleteAuthorSchema } = require('./_schemas');
@@ -37,9 +38,9 @@ const postAuthor = async (req, res, next) => {
  */
 const getAuthors = async (req, res, next) => {
   try {
+    httpValidator({ query: req.query }, getAuthorsSchema);
 
-
-    const result = await listAuthors();
+    const result = await listAuthors({ ...req.query });
 
     res.status(200).json({
       data: result,

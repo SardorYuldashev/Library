@@ -9,7 +9,7 @@ Content-Type: application/json
 
 
 ### Mualliflar ro'yxati
-GET http://localhost:3000/authors
+GET http://localhost:3000/authors?sort[by]=full_name&sort[order]=desc
 Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRjMzlhMzhiOWEzMGZmMTFiZWM1NmRkIiwiaXNfc3VwZXIiOmZhbHNlfSwiaWF0IjoxNjkwNTQwNjc4LCJleHAiOjE2OTA2MjcwNzh9.fnC2JalhpEbccHd0MJkCzYE8I27nV5GD19cN29o8eJA
 
 
