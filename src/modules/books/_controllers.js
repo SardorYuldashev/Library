@@ -8,7 +8,8 @@ const removeBook = require('./remove-book');
 const { postBookSchema,
   showBookSchema,
   patchBookSchema,
-  deleteBookSchema } = require('./_schemas');
+  deleteBookSchema,
+  getBooksSchema } = require('./_schemas');
 
 /**
  * @param {express.Request} req
@@ -36,9 +37,9 @@ const postBook = async (req, res, next) => {
  */
 const getBooks = async (req, res, next) => {
   try {
+    httpValidator({ query: req.query }, getBooksSchema);
 
-
-    const result = await listBooks();
+    const result = await listBooks({ ...req.query });
 
     res.status(200).json({
       data: result,

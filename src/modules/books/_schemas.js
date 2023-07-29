@@ -1,4 +1,5 @@
 const Joi = require('joi');
+const { offsetPaginaionSchema, makeSortSchema } = require('../../shared/schemas');
 
 exports.postBookSchema = {
   body: Joi.object({
@@ -6,6 +7,19 @@ exports.postBookSchema = {
     publisher: Joi.string().required(),
     author: Joi.string().required(),
     copies: Joi.number().integer().required(),
+  }),
+};
+
+exports.getBooksSchema = {
+  query: Joi.object({
+    q: Joi.string(),
+    page: offsetPaginaionSchema,
+    sort: makeSortSchema(["copies"]),
+    filters: Joi.object({
+      is_deleted: Joi.boolean(),
+      publisher: Joi.string(),
+      author : Joi.string(),
+    }),
   }),
 };
 

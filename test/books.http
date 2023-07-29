@@ -12,7 +12,7 @@ Content-Type: application/json
 
 
 ### Kitoblar ro'yxati
-GET http://localhost:3000/books
+GET http://localhost:3000/books?filters[publisher]=64c41f627431862d54847e03
 Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRjMzlhMzhiOWEzMGZmMTFiZWM1NmRkIiwiaXNfc3VwZXIiOmZhbHNlfSwiaWF0IjoxNjkwNTQwNjc4LCJleHAiOjE2OTA2MjcwNzh9.fnC2JalhpEbccHd0MJkCzYE8I27nV5GD19cN29o8eJA
 
 
