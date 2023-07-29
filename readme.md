@@ -90,3 +90,82 @@ page[offset]= type number
 page[limit]= type number
 <br>
 filters[is_deleted]= type boolean
+
+## Mualliflar uchun
+
+| Method | url | description | token | body |
+|---|---|---|---|---|
+| POST | /authors | Muallifni ro'yxatdan o'tkazish | true | full_name |
+| GET | /authors | Mualliflar ro'yxatini olish | true | |
+| GET | /authors/:id | Bitta muallif ma'lumoti | true | |
+| PATCH | /authors/:id | Muallif ma'lumotini tahrirlash | true | full_name? |
+| DELETE | /authors/:id | Muallifni o'chirish | true | |
+
+*** GET /authors yo'liga so'rov jo'natishda query yuborish mumkin
+<br>
+q= type string,
+<br>
+sort[by]= full_name
+<br>
+sort[order]= asc || desc
+<br>
+page[offset]= type number
+<br>
+page[limit]= type number
+<br>
+filters[is_deleted]= type boolean
+
+## Kitoblarlar uchun
+
+| Method | url | description | token | body |
+|---|---|---|---|---|
+| POST | /books | Kitobni ro'yxatdan o'tkazish | true | title, publisher, author, copies |
+| GET | /books | Kitoblar ro'yxatini olish | true | |
+| GET | /books/:id | Bitta kitob ma'lumoti | true | |
+| PATCH | /books/:id | Kitob ma'lumotini tahrirlash | true | title?, publisher?, author?, copies? |
+| DELETE | /books/:id | Kitobni o'chirish | true | |
+
+*** GET /books yo'liga so'rov jo'natishda query yuborish mumkin
+<br>
+q= type string,
+<br>
+sort[by]= copies
+<br>
+sort[order]= asc || desc
+<br>
+page[offset]= type number
+<br>
+page[limit]= type number
+<br>
+filters[is_deleted]= type boolean
+<br>
+filters[publisher]= type string
+<br>
+filters[author]= type string
+
+## Ijaralar uchun
+
+| Method | url | description | token | body |
+|---|---|---|---|---|
+| POST | /loans | Ijarani ro'yxatdan o'tkazish | true | book, borrower, due_date |
+| GET | /loans | Ijaralar ro'yxatini olish | true | |
+| GET | /loans/:id | Bitta ijara ma'lumoti | true | |
+| PATCH | /loans/:id | Ijarani muvaffaqiyatli yakunlash | true | book?, borrower?, due_date? |
+
+*** GET /loans yo'liga so'rov jo'natishda query yuborish mumkin
+<br>
+q= type string,
+<br>
+sort[by]= out_date || due_date
+<br>
+sort[order]= asc || desc
+<br>
+page[offset]= type number
+<br>
+page[limit]= type number
+<br>
+filters[admin]= type string
+<br>
+filters[book]= type string
+<br>
+filters[borrower]= type string
