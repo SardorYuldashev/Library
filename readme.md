@@ -21,13 +21,12 @@ Ma'lumotlar omborida adminlar, kitobxonlar, kitoblar, nashriyotlar, mualliflar v
 | POST | /admins | Adminni ro'yxatdan o'tkazish | true | true | full_name, username, password |
 | GET | /admins | Adminlar ro'yxatini olish | true | | |
 | GET | /admins/:id | Bitta admin ma'lumoti | true | | |
-| PATCH | /admins/:id | Admin ma'lumotimin ma'lumotini tahrirlash | true | true | full_name?, username?, password? |
-| PATCH | /admins | Admin o'z ma'lumotimin ma'lumotini tahrirlash | true | | full_name?, username?, password? |
+| PATCH | /admins/:id | Admin ma'lumotimini ma'lumotini tahrirlash | true | true | full_name?, username?, password? |
+| PATCH | /admins | Admin o'z ma'lumotimini ma'lumotini tahrirlash | true | | full_name?, username?, password? |
 | DELETE | /admins/:id | Adminni o'chirish | true | true | |
 
 
-! POST /login yo'li token qaytaradi
-
+*** POST /login yo'li token qaytaradi
 *** GET /admins yo'liga so'rov jo'natishda query yuborish mumkin
 <br>
 q= type string,
@@ -43,3 +42,27 @@ page[limit]= type number
 filters[is_deleted]= type boolean
 <br>
 filters[is_super]= type boolean
+
+## Kitobxonlar uchun
+
+| Method | url | description | token | body |
+|---|---|---|---|---|
+| POST | /borrowers | Foydalanuvchini ro'yxatdan o'tkazish | true | full_name, address, phone |
+| GET | /borrowers | Foydalanuvchilar ro'yxatini olish | true | |
+| GET | /borrowers/:id | Bitta foydalanuvchi ma'lumoti | true | |
+| PATCH | /borrowers/:id | Foydalanuvchi ma'lumotimini ma'lumotini tahrirlash | true | full_name?, username?, phone? |
+| DELETE | /borrowers/:id | Foydalanuvchini o'chirish | true | |
+
+*** GET /borrowers yo'liga so'rov jo'natishda query yuborish mumkin
+<br>
+q= type string,
+<br>
+sort[by]= full_name || phone
+<br>
+sort[order]= asc || desc
+<br>
+page[offset]= type number
+<br>
+page[limit]= type number
+<br>
+filters[is_deleted]= type boolean
