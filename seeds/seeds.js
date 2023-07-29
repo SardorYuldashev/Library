@@ -6,7 +6,7 @@ const Author = require('../src/modules/authors/_Author');
 const Book = require('../src/modules/books/_Book');
 const Loan = require('../src/modules/loans/_Loan');
 const config = require('../src/shared/config');
-const bcrypt = require('bcryptjs')
+const bcrypt = require('bcryptjs');
 
 mongoose
   .connect(`mongodb://${config.db.host}/${config.db.name}`, {
@@ -19,8 +19,6 @@ mongoose
   .catch((err) => {
     console.log('DB da xatolik: ', err);
   });
-
-
 
 const seedAdmins = [
   {

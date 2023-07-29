@@ -1,33 +1,33 @@
 ### Muallif qo'shish
 POST http://localhost:3000/authors
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRjMzlhMzhiOWEzMGZmMTFiZWM1NmRkIiwiaXNfc3VwZXIiOmZhbHNlfSwiaWF0IjoxNjkwNTQwNjc4LCJleHAiOjE2OTA2MjcwNzh9.fnC2JalhpEbccHd0MJkCzYE8I27nV5GD19cN29o8eJA
+Authorization: 
 Content-Type: application/json
 
 {
-  "full_name": "Chingiz Aytmatov"
+  "full_name": ""
 }
 
 
 ### Mualliflar ro'yxati
 GET http://localhost:3000/authors
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRjMzlhMzhiOWEzMGZmMTFiZWM1NmRkIiwiaXNfc3VwZXIiOmZhbHNlfSwiaWF0IjoxNjkwNTQwNjc4LCJleHAiOjE2OTA2MjcwNzh9.fnC2JalhpEbccHd0MJkCzYE8I27nV5GD19cN29o8eJA
+Authorization: 
 
 
 ### Bitta muallif
-GET http://localhost:3000/authors/64c3951630cf9bec7519d5bd
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRjMzlhMzhiOWEzMGZmMTFiZWM1NmRkIiwiaXNfc3VwZXIiOmZhbHNlfSwiaWF0IjoxNjkwNTQwNjc4LCJleHAiOjE2OTA2MjcwNzh9.fnC2JalhpEbccHd0MJkCzYE8I27nV5GD19cN29o8eJA
+GET http://localhost:3000/authors/:id
+Authorization: 
 
 
-### Nashriyotni tahrirlash
-PATCH http://localhost:3000/authors/64c3951630cf9bec7519d5bd
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRjMzlhMzhiOWEzMGZmMTFiZWM1NmRkIiwiaXNfc3VwZXIiOmZhbHNlfSwiaWF0IjoxNjkwNTQwNjc4LCJleHAiOjE2OTA2MjcwNzh9.fnC2JalhpEbccHd0MJkCzYE8I27nV5GD19cN29o8eJA
+### Muallifnini tahrirlash
+PATCH http://localhost:3000/authors/:id
+Authorization: 
 Content-Type: application/json
 
 {
-  "full_name": "Abdulla Qodriy"
+  "full_name": ""
 }
 
 
-### Nashriyotni o'chirish
-DELETE http://localhost:3000/authors/64c3951630cf9bec7519d5bd
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRjMzlhMzhiOWEzMGZmMTFiZWM1NmRkIiwiaXNfc3VwZXIiOmZhbHNlfSwiaWF0IjoxNjkwNTQwNjc4LCJleHAiOjE2OTA2MjcwNzh9.fnC2JalhpEbccHd0MJkCzYE8I27nV5GD19cN29o8eJA
+### Muallifni o'chirish
+DELETE http://localhost:3000/authors/:id
+Authorization: 

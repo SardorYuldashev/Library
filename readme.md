@@ -26,7 +26,7 @@ Ma'lumotlar omborida adminlar, kitobxonlar, kitoblar, nashriyotlar, mualliflar v
 | DELETE | /admins/:id | Adminni o'chirish | true | true | |
 
 
-*** POST /login yo'li token qaytaradi
+*** POST /login yo'li 24 soatlik token qaytaradi
 *** GET /admins yo'liga so'rov jo'natishda query yuborish mumkin
 <br>
 q= type string,

@@ -10,7 +10,8 @@ const {
   getBorrowersSchema,
   showBorrowerSchema,
   patchBorrowerSchema,
-  deleteBorrowerSchema } = require('./_schemas');
+  deleteBorrowerSchema
+} = require('./_schemas');
 
 /**
  * @param {express.Request} req

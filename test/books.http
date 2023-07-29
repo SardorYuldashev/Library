@@ -1,36 +1,39 @@
 ### Kitob qo'shish
 POST http://localhost:3000/books
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRjMzlhMzhiOWEzMGZmMTFiZWM1NmRkIiwiaXNfc3VwZXIiOmZhbHNlfSwiaWF0IjoxNjkwNTQwNjc4LCJleHAiOjE2OTA2MjcwNzh9.fnC2JalhpEbccHd0MJkCzYE8I27nV5GD19cN29o8eJA
+Authorization:
 Content-Type: application/json
 
 {
-  "title": "Ufq",
-  "publisher": "64c39e129413fd5fda6024a1",
-  "author": "64c39d559413fd5fda60248d",
-  "copies": 523
+  "title": "",
+  "publisher": "",
+  "author": "",
+  "copies": 
 }
 
 
 ### Kitoblar ro'yxati
-GET http://localhost:3000/books?q=a&page[offset]=3&page[limit]=5
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRjMzlhMzhiOWEzMGZmMTFiZWM1NmRkIiwiaXNfc3VwZXIiOmZhbHNlfSwiaWF0IjoxNjkwNTQwNjc4LCJleHAiOjE2OTA2MjcwNzh9.fnC2JalhpEbccHd0MJkCzYE8I27nV5GD19cN29o8eJA
+GET http://localhost:3000/books
+Authorization:
 
 
 ### Bitta kitob
-GET http://localhost:3000/books/64c3a2e9149664997efbb6bd
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRjMzlhMzhiOWEzMGZmMTFiZWM1NmRkIiwiaXNfc3VwZXIiOmZhbHNlfSwiaWF0IjoxNjkwNTQwNjc4LCJleHAiOjE2OTA2MjcwNzh9.fnC2JalhpEbccHd0MJkCzYE8I27nV5GD19cN29o8eJA
+GET http://localhost:3000/books/:id
+Authorization:
 
 
 ### Kitobni tahrirlash
-PATCH http://localhost:3000/books/64c3a2e9149664997efbb6bd
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRjMzlhMzhiOWEzMGZmMTFiZWM1NmRkIiwiaXNfc3VwZXIiOmZhbHNlfSwiaWF0IjoxNjkwNTQwNjc4LCJleHAiOjE2OTA2MjcwNzh9.fnC2JalhpEbccHd0MJkCzYE8I27nV5GD19cN29o8eJA
+PATCH http://localhost:3000/books/:id
+Authorization:
 Content-Type: application/json
 
 {
-  "publisher": "64c39dfd9413fd5fda60249d"
+  "title": "",
+  "publisher": "",
+  "author": "",
+  "copies": 
 }
 
 
 ### Kitobni o'chirish
-DELETE http://localhost:3000/books/64c3a2e9149664997efbb6bd
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRjMzlhMzhiOWEzMGZmMTFiZWM1NmRkIiwiaXNfc3VwZXIiOmZhbHNlfSwiaWF0IjoxNjkwNTQwNjc4LCJleHAiOjE2OTA2MjcwNzh9.fnC2JalhpEbccHd0MJkCzYE8I27nV5GD19cN29o8eJA
+DELETE http://localhost:3000/books/:id
+Authorization:

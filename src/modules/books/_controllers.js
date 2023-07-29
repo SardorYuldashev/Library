@@ -9,7 +9,8 @@ const { postBookSchema,
   showBookSchema,
   patchBookSchema,
   deleteBookSchema,
-  getBooksSchema } = require('./_schemas');
+  getBooksSchema
+} = require('./_schemas');
 
 /**
  * @param {express.Request} req

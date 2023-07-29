@@ -18,7 +18,7 @@ exports.getBooksSchema = {
     filters: Joi.object({
       is_deleted: Joi.boolean(),
       publisher: Joi.string(),
-      author : Joi.string(),
+      author: Joi.string(),
     }),
   }),
 };

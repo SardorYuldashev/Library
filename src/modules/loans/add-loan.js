@@ -1,7 +1,21 @@
-const { ForbiddenError } = require('../../shared/errors');
+const { ForbiddenError, NotFoundError } = require('../../shared/errors');
 const Loan = require('./_Loan');
+const Book = require('../books/_Book');
+const Borrower = require('../borrowers/_Borrower');
 
 const addLoan = async (data, user) => {
+
+  const bookExist = await Book.findOne({ _id: data.book, is_deleted: false });
+
+  if (!bookExist) {
+    throw new NotFoundError("Kitob topilmadi");
+  };
+
+  const borrowerExist = await Borrower.findOne({ _id: data.borrower, is_deleted: false });
+
+  if (!borrowerExist) {
+    throw new NotFoundError("Kitobxon topilmadi");
+  };
 
   const exist = await Loan.find({ borrower: data.borrower });
 

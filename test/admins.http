@@ -1,12 +1,12 @@
 ### Admin qo'shish
 POST http://localhost:3000/admins
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRjMzlhMjZiOWEzMGZmMTFiZWM1NmRiIiwiaXNfc3VwZXIiOnRydWV9LCJpYXQiOjE2OTA1NDA4NjIsImV4cCI6MTY5MDYyNzI2Mn0.yKahodCgXdGZbF0hdGFk_A3a7mD4vFLFhVo-cZ_i6sA
+Authorization: 
 Content-Type: application/json
 
 {
-  "full_name": "Oybek Xasanov",
-  "username": "oybek",
-  "password": "1234"
+  "full_name": "",
+  "username": "",
+  "password": ""
 }
 
 
@@ -15,41 +15,45 @@ POST http://localhost:3000/login
 Content-Type: application/json
 
 {
-  "username": "sardor",
-  "password": "1234"
+  "username": "",
+  "password": ""
 }
 
 
 ### Adminlar ro'yxati
 GET http://localhost:3000/admins
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRjMzlhMzhiOWEzMGZmMTFiZWM1NmRkIiwiaXNfc3VwZXIiOmZhbHNlfSwiaWF0IjoxNjkwNTQwNjc4LCJleHAiOjE2OTA2MjcwNzh9.fnC2JalhpEbccHd0MJkCzYE8I27nV5GD19cN29o8eJA
+Authorization: 
 
 
 ### Bitta adminni ko'rish
-GET http://localhost:3000/admins/64c40e64fa5abcf2cb5febd4
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRjMzlhMzhiOWEzMGZmMTFiZWM1NmRkIiwiaXNfc3VwZXIiOmZhbHNlfSwiaWF0IjoxNjkwNTQwNjc4LCJleHAiOjE2OTA2MjcwNzh9.fnC2JalhpEbccHd0MJkCzYE8I27nV5GD19cN29o8eJA
+GET http://localhost:3000/admins/:id
+Authorization: 
 
 
-### Edit admin (hamma)
+### Edit admin (all)
 PATCH http://localhost:3000/admins
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRjMzlhMzhiOWEzMGZmMTFiZWM1NmRkIiwiaXNfc3VwZXIiOmZhbHNlfSwiaWF0IjoxNjkwNTQwNjc4LCJleHAiOjE2OTA2MjcwNzh9.fnC2JalhpEbccHd0MJkCzYE8I27nV5GD19cN29o8eJA
+Authorization: 
 Content-Type: application/json
 
 {
-  "full_name": "Imron Abdusalimov"
+  "full_name": "",
+  "username": "",
+  "password": ""
 }
 
 
-### Edit admin (super_admin)
-PATCH http://localhost:3000/admins/64c39a69b9a30ff11bec56e1
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRjMzlhMzhiOWEzMGZmMTFiZWM1NmRkIiwiaXNfc3VwZXIiOmZhbHNlfSwiaWF0IjoxNjkwNTQwNjc4LCJleHAiOjE2OTA2MjcwNzh9.fnC2JalhpEbccHd0MJkCzYE8I27nV5GD19cN29o8eJA
+### Edit admin (only super_admin)
+PATCH http://localhost:3000/admins/:id
+Authorization: 
 Content-Type: application/json
 
 {
-  "full_name": "Arziyev Sherzod"
+  "full_name": "",
+  "username": "",
+  "password": ""
 }
 
 
-### Adminni o'chirish (super_admin)
-DELETE http://localhost:3000/admins/64c39a69b9a30ff11bec56e1
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRjMzlhMjZiOWEzMGZmMTFiZWM1NmRiIiwiaXNfc3VwZXIiOnRydWV9LCJpYXQiOjE2OTA1NDA4NjIsImV4cCI6MTY5MDYyNzI2Mn0.yKahodCgXdGZbF0hdGFk_A3a7mD4vFLFhVo-cZ_i6sA
+### Adminni o'chirish (only super_admin)
+DELETE http://localhost:3000/admins/:id
+Authorization:

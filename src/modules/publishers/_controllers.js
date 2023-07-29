@@ -10,7 +10,8 @@ const {
   getPublishersSchema,
   showPublisherSchema,
   patchPublisherSchema,
-  deletePublisherSchema } = require('./_schemas');
+  deletePublisherSchema
+} = require('./_schemas');
 
 /**
  * @param {express.Request} req
