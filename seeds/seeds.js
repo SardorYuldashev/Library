@@ -43,7 +43,7 @@ const seedAdmins = [
     _id: "64c419af38db71f5ea7aadba",
     full_name: "Orzu Mirzayev",
     username: "orzu",
-    password: bcrypt.hashSync('123456', 10),
+    password: bcrypt.hashSync('1234', 10),
     is_super: false,
     is_deleted: false
   },
