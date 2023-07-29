@@ -27,6 +27,7 @@ Ma'lumotlar omborida adminlar, kitobxonlar, kitoblar, nashriyotlar, mualliflar v
 
 
 *** POST /login yo'li 24 soatlik token qaytaradi
+<br>
 *** GET /admins yo'liga so'rov jo'natishda query yuborish mumkin
 <br>
 q= type string,
