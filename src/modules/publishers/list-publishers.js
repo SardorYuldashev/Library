@@ -6,12 +6,14 @@ const listPublishers = async ({ q, page = { limit: 5, offset: 0 }, sort = { by: 
     filters.name = { $regex: new RegExp(q, "i") };
   };
 
+  const total = (await Publisher.find({ ...filters })).length;
+
   const result = await Publisher.find({ ...filters })
     .skip(page.offset)
     .limit(page.limit)
     .sort({ [sort.by]: sort.order });
 
-  return { publishers: result, total: result.length, pageInfo: { ...page } };
+  return { publishers: result, total, pageInfo: { ...page } };
 };
 
 module.exports = listPublishers;

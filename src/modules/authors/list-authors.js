@@ -6,12 +6,14 @@ const listAuthors = async ({ q, page = { limit: 5, offset: 0 }, sort = { by: 'fu
     filters.full_name = { $regex: new RegExp(q, "i") };
   };
 
+  const total = (await Author.find({ ...filters })).length;
+
   const result = await Author.find({ ...filters })
     .skip(page.offset)
     .limit(page.limit)
     .sort({ [sort.by]: sort.order });
 
-  return { authors: result, total: result.length, pageInfo: { ...page } };
+  return { authors: result, total, pageInfo: { ...page } };
 };
 
 module.exports = listAuthors;

@@ -11,7 +11,7 @@ Content-Type: application/json
 
 
 ### Buyurtmalarni ko'rish
-GET http://localhost:3000/loans?filters[borrower]=64c41c81996b735434437233
+GET http://localhost:3000/loans
 Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRjMzlhMzhiOWEzMGZmMTFiZWM1NmRkIiwiaXNfc3VwZXIiOmZhbHNlfSwiaWF0IjoxNjkwNTQwNjc4LCJleHAiOjE2OTA2MjcwNzh9.fnC2JalhpEbccHd0MJkCzYE8I27nV5GD19cN29o8eJA
 
 

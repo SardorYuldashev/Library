@@ -4,7 +4,9 @@ const listBooks = async ({ q, page = { limit: 5, offset: 0 }, sort = { by: 'copi
 
   if (q) {
     filters.title = { $regex: new RegExp(q, "i") };
-  }
+  };
+
+  const total = (await Book.find({ ...filters })).length;
 
   const result = await Book.find({ ...filters })
     .populate([
@@ -21,7 +23,7 @@ const listBooks = async ({ q, page = { limit: 5, offset: 0 }, sort = { by: 'copi
     .limit(page.limit)
     .sort({ [sort.by]: sort.order });
 
-  return { books: result, total: result.length, pageInfo: { ...page } };
+  return { books: result, total, pageInfo: { ...page } };
 };
 
 module.exports = listBooks;

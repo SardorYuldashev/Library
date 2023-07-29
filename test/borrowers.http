@@ -11,7 +11,7 @@ Content-Type: application/json
 
 
 ### Kitobxonlar ro'yxati
-GET http://localhost:3000/borrowers?q=o&page[limit]=3&page[offset]=0
+GET http://localhost:3000/borrowers
 Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRjMzlhMzhiOWEzMGZmMTFiZWM1NmRkIiwiaXNfc3VwZXIiOmZhbHNlfSwiaWF0IjoxNjkwNTQwNjc4LCJleHAiOjE2OTA2MjcwNzh9.fnC2JalhpEbccHd0MJkCzYE8I27nV5GD19cN29o8eJA
 
 
