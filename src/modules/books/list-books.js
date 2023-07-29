@@ -1,6 +1,6 @@
 const Book = require("./_Book");
 
-const listBooks = async ({ q, page = { limit: 10, offset: 0 }, sort = { by: 'copies', order: 'desc' }, filters }) => {
+const listBooks = async ({ q, page = { limit: 5, offset: 0 }, sort = { by: 'copies', order: 'desc' }, filters = {} }) => {
 
   if (q) {
     filters.title = { $regex: new RegExp(q, "i") };

@@ -10,6 +10,7 @@ const removeAdmin = require('./remove-admin');
 const {
   postRegisterAdminSchema,
   postLoginAdminSchema,
+  getAdminsSchema,
   showAdminSchema,
   patchAdminSchema,
   deleteAdminSchema
@@ -61,9 +62,9 @@ const postLoginAdmin = async (req, res, next) => {
  */
 const getAdmins = async (req, res, next) => {
   try {
+    httpValidator({ query: req.query }, getAdminsSchema);
 
-
-    const result = await listAdmins();
+    const result = await listAdmins({ ...req.query });
 
     res.status(200).json({
       data: result,
