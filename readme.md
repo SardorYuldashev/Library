@@ -28,11 +28,18 @@ Ma'lumotlar omborida adminlar, kitobxonlar, kitoblar, nashriyotlar, mualliflar v
 
 * POST /login yo'li token qaytaradi
 
-** GET /admins yo'liga so'rov jo'natishda query yuborish mumkin
+* GET /admins yo'liga so'rov jo'natishda query yuborish mumkin
+<br>
 q= type string,
+<br>
 sort[by]= full_name || username
+<br>
 sort[order]= asc || desc
+<br>
 page[offset]= type number
+<br>
 page[limit]= type number
+<br>
 filters[is_deleted]= type boolean
+<br>
 filters[is_super]= type boolean
