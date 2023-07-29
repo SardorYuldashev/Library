@@ -3,7 +3,7 @@ const httpValidator = require('../../shared/http-validator');
 const addLoan = require('./add-loan');
 const listLoans = require('./list-loans');
 const showLoan = require('./show-loan');
-const { postLoanSchema, showLoanSchema, editLoanSchema } = require('./_schemas');
+const { postLoanSchema, getLoansSchema, showLoanSchema, editLoanSchema } = require('./_schemas');
 const editLoan = require('./edit-loan');
 
 /**
@@ -32,9 +32,10 @@ const postLoan = async (req, res, next) => {
  */
 const getLoans = async (req, res, next) => {
   try {
+    httpValidator({ query: req.query }, getLoansSchema);
 
 
-    const result = await listLoans();
+    const result = await listLoans({ ...req.query });
 
     res.status(200).json({
       data: result,
