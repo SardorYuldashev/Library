@@ -1,10 +1,17 @@
 const Publisher = require("./_Publisher");
 
-const listPublishers = async () => {
+const listPublishers = async ({ q, page = { limit: 5, offset: 0 }, sort = { by: 'name', order: 'asc' }, filters = {} }) => {
 
-  const result = await Publisher.find()
+  if (q) {
+    filters.name = { $regex: new RegExp(q, "i") };
+  };
 
-  return result;
+  const result = await Publisher.find({ ...filters })
+    .skip(page.offset)
+    .limit(page.limit)
+    .sort({ [sort.by]: sort.order });
+
+  return { publishers: result, total: result.length, pageInfo: { ...page } };
 };
 
 module.exports = listPublishers;

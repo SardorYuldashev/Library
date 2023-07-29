@@ -7,6 +7,7 @@ const editPublisher = require('./edit-publisher');
 const removePublisher = require('./remove-publisher');
 const {
   postPublisherSchema,
+  getPublishersSchema,
   showPublisherSchema,
   patchPublisherSchema,
   deletePublisherSchema } = require('./_schemas');
@@ -37,9 +38,9 @@ const postPublisher = async (req, res, next) => {
  */
 const getPublishers = async (req, res, next) => {
   try {
+    httpValidator({ query: req.query }, getPublishersSchema);
 
-
-    const result = await listPublishers();
+    const result = await listPublishers({ ...req.query });
 
     res.status(200).json({
       data: result,
