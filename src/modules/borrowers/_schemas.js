@@ -1,10 +1,23 @@
 const Joi = require('joi');
+const { offsetPaginaionSchema, makeSortSchema } = require('../../shared/schemas');
 
 exports.postBorrowerSchema = {
   body: Joi.object({
     full_name: Joi.string().required(),
     address: Joi.string().required(),
     phone: Joi.string().required().length(13),
+  }),
+};
+
+exports.getBorrowersSchema = {
+  query: Joi.object({
+    q: Joi.string(),
+    page: offsetPaginaionSchema,
+    sort: makeSortSchema(["full_name", "phone"]),
+    filters: Joi.object({
+      is_deleted: Joi.boolean(),
+      is_super: Joi.boolean(),
+    }),
   }),
 };
 

@@ -1,10 +1,17 @@
 const Borrower = require("./_Borrower");
 
-const listBorrowers = async () => {
+const listBorrowers = async ({ q, page = { limit: 5, offset: 0 }, sort = { by: 'full_name', order: 'asc' }, filters = {} }) => {
 
-  const result = await Borrower.find()
+  if (q) {
+    filters.full_name = { $regex: new RegExp(q, "i") };
+  };
 
-  return result;
+  const result = await Borrower.find({ ...filters })
+    .skip(page.offset)
+    .limit(page.limit)
+    .sort({ [sort.by]: sort.order });
+
+  return { borrowers: result, total: result.length, pageInfo: { ...page } };
 };
 
 module.exports = listBorrowers;

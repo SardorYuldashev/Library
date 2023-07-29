@@ -7,6 +7,7 @@ const editBorrower = require('./edit-borrower');
 const removeBorrower = require('./remove-borrower');
 const {
   postBorrowerSchema,
+  getBorrowersSchema,
   showBorrowerSchema,
   patchBorrowerSchema,
   deleteBorrowerSchema } = require('./_schemas');
@@ -37,9 +38,10 @@ const postBorrower = async (req, res, next) => {
  */
 const getBorrowers = async (req, res, next) => {
   try {
+    httpValidator({ query: req.query }, getBorrowersSchema);
 
 
-    const result = await listBorrowers();
+    const result = await listBorrowers({ ...req.query });
 
     res.status(200).json({
       data: result,
